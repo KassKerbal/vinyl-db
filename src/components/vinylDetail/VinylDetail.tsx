@@ -24,6 +24,7 @@ function VinylDetail() {
 
   useEffect(() => {
     apiController()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAddForm])
 
 

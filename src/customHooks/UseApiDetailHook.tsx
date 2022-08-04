@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { DataForm } from '../utils/types';
 
 interface UseApiHookProps {
@@ -37,6 +37,7 @@ function UseApiListHook({ endPoint, method, body, id }: UseApiHookProps) {
     useEffect((
         () => {
             apiController()
+            // eslint-disable-next-line react-hooks/exhaustive-deps
         }), []);
 
     return [apiData, loading, error, apiController] as const;

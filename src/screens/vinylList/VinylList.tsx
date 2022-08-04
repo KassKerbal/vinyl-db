@@ -29,7 +29,9 @@ function VinylList() {
                 <div className={styles.itemWrap}>
 
                 {loading ? <div>Loading...</div>
-                    : <>{itemMap}</>
+                    : <>
+                    {itemMap.length !== 0 ? itemMap : <h1>No Vinyl found. Please return to Options to add a Vinyl.</h1>}
+                    </>
                 }
             </div>
             </div>

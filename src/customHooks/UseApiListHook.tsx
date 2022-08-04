@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { DataForm } from '../utils/types';
 
 interface UseApiHookProps {
@@ -15,7 +15,7 @@ function UseApiListHook({ endPoint, method, body }: UseApiHookProps) {
 
     const request = {
         method,
-        headers: {'Content-Type': 'application/json'},
+        headers: { 'Content-Type': 'application/json' },
         body
     }
 
@@ -34,7 +34,7 @@ function UseApiListHook({ endPoint, method, body }: UseApiHookProps) {
                     setLoading(false);
                 }
             })()
-
+            // eslint-disable-next-line react-hooks/exhaustive-deps
         }), []);
 
     return [apiData, loading, error] as const;
