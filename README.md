@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Vinyl DataBase
 
 This project is a vinyl database
 
